@@ -49,7 +49,7 @@ const createLi = (task) => {
 
   // Append all elements to li in order
   li.append(checkbox, div, textInput, removeButton, button);
-  
+
   taskList.appendChild(li);
 
   // create functions for specific behaviors
