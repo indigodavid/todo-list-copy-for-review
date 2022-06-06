@@ -90,8 +90,6 @@ const createLi = (task) => {
 
   li.addEventListener('dragstart', (e) => {
     li.style.backgroundColor = '#fff';
-    // li.style.boxShadow = '2px 2px 2px #444';
-
     localStorage.setItem('draggedItem', JSON.stringify(li.id));
 
     e.dataTransfer.effectAllowed = 'move';
