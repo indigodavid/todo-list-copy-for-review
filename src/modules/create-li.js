@@ -48,12 +48,8 @@ const createLi = (task) => {
   removeButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
   // Append all elements to li in order
-  li.appendChild(checkbox);
-  li.appendChild(div);
-  li.appendChild(textInput);
-  li.appendChild(removeButton);
-  li.appendChild(button);
-
+  li.append(checkbox, div, textInput, removeButton, button);
+  
   taskList.appendChild(li);
 
   // create functions for specific behaviors
