@@ -1,13 +1,11 @@
-import _ from 'lodash';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 import './style.css';
+import createLi from './modules/create-li.js';
+import addTaskEvent from './modules/add-task.js';
+import getData from './modules/get-data.js';
+import clearCompleted from './modules/clear-completed.js';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-  return element;
-}
-
-document.body.appendChild(component());
+getData().forEach((task) => createLi(task));
+clearCompleted();
+addTaskEvent();
